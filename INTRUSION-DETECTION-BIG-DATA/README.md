@@ -1,4 +1,10 @@
-# INTRUSION-DETECTION-BIG-DATA
+# 复现改写内容说明
+##数据集
+未知原文采用的数据集内容以及格式,复现过程调整为了UNSW_NB15_testing-set以及UNSW_NB15_training-set,并针对论文中阐述的预处理方法进行了调整.
+##算法
+原作者公开的源码为在分布式集群服务器中运行的代码,在本地PC中较难复现,三种算法均进行了一定程度的重写,但思路仍然遵循论文思路.
+
+# 原README<br/>INTRUSION-DETECTION-BIG-DATA
 
 The proposed method evaluated by two modern datasets UNSW-NB15 and CICIDS2017, which contain a combination of common and modern attacks, the data sets are preprocessing to be suitable for the applying the machine learning techniques. The k means clustering (Homogeneity metric) used as unsupervised feature selection technique to relevant features from both data sets that improve the performance of classifiers. Five-fold cross validation to estimate and improve the performance of machine learning models. Deep neural network and two ensemble techniques (RF, GBT) are using to extract the models from subset of relevant features. The phases of the proposed method are explained in more detail as follows:
 
