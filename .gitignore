@@ -24,3 +24,17 @@ logs
 多分类
 *.rar
 *.eps
+*.ods
+*.tex
+*.bib
+*.cls
+*.bst
+*.pickle
+*.sty
+*.aux
+*.svg
+*.pdf
+*.pth
+*.rfmodel
+*.gpu
+!/ids-backdoor/paper/3359992.3366638.pdf
