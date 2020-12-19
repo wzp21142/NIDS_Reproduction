@@ -37,4 +37,4 @@ logs
 *.pth
 *.rfmodel
 *.gpu
-!/ids-backdoor/paper/3359992.3366638.pdf
+ids-backdoor
