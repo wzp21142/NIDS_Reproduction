@@ -227,8 +227,6 @@ def next_batch(filename, batch_size):
     next_data, next_label_2, next_label_10 = iterator.get_next()
 
     return next_data, next_label_10, next_label_2
-
-
 # Integrate the four separate data sets
 # 将分开的4个数据集整合到一起
 def make_whole_datasets(tfrecords_train, num_train_example, tfrecords_test,
