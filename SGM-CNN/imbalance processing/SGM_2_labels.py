@@ -3,8 +3,8 @@
 from collections import Counter
 import numpy as np
 
-data = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/train_select_12_data.npy')
-label = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/train_select_12_label_2.npy')
+data = np.load('../dataset/SGM-CNN/新建文件夹/train_select_12_data.npy')
+label = np.load('../dataset/SGM-CNN/新建文件夹/train_select_12_label_2.npy')
 
 X = np.array(data)
 b = np.array(label)
@@ -105,5 +105,5 @@ sorted(Counter(label_end).items())
 
 label_end = label_end.reshape(label_end.shape[0], 1)
 
-np.save("F:/数据挖掘/SGM-CNN/新建文件夹/SGM_data_train.npy", data_end)
-np.save("F:/数据挖掘/SGM-CNN/新建文件夹/SGM_label2_train.npy", label_end)
+np.save("../dataset/SGM-CNN/新建文件夹/SGM_data_train.npy", data_end)
+np.save("../dataset/SGM-CNN/新建文件夹/SGM_label2_train.npy", label_end)

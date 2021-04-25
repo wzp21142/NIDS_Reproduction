@@ -240,7 +240,7 @@ def make_whole_datasets(tfrecords_train, num_train_example, tfrecords_test,
 
 
 if __name__ == '__main__':
-    file_folder = 'F:/数据挖掘/SGM-CNN/UNSW_NB15/'  # 读取的原始文件所在的位置。 The location where the original file was read
+    file_folder = '../dataset/SGM-CNN/UNSW_NB15/'  # 读取的原始文件所在的位置。 The location where the original file was read
     col_names = ['srcip', 'sport', 'dstip', 'dsport', 'proto', 'state', 'dur',
                  'sbytes', 'dbytes', 'sttl', 'dttl', 'sloss', 'dloss',
                  'service', 'sload', 'dload', 'spkts', 'dpkts', 'swin', 'dwin',

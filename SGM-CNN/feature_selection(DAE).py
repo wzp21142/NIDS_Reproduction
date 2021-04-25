@@ -403,17 +403,17 @@ if __name__ == '__main__':
     num_select = 12  # 选择出来的特征数。The number of selected features
     num_feature = 202
     len_label = 1
-    file_weights = 'F:/数据挖掘/SGM-CNN/normalized/weights_new_3.5.txt'
+    file_weights = '../dataset/SGM-CNN/normalized/weights_new_3.5.txt'
 
     indices = get_indices(num_select, num_feature, file_weights)
     # print(indices)
     show_feature_name(indices)
 
-    file_train = 'F:/数据挖掘/SGM-CNN/normalized/train.tfrecords'
-    file_valid = 'F:/数据挖掘/SGM-CNN/normalized/validation.tfrecords'
+    file_train = '../dataset/SGM-CNN/normalized/train.tfrecords'
+    file_valid = '../dataset/SGM-CNN/normalized/validation.tfrecords'
     num_examples_train = 1778030
     num_examples_validation = 254005
-    file_test = 'F:/数据挖掘/SGM-CNN/normalized/test.tfrecords'
+    file_test = '../dataset/SGM-CNN/normalized/test.tfrecords'
     num_examples_test = 508012
 
     select_feature(file_train, num_examples_train, indices)

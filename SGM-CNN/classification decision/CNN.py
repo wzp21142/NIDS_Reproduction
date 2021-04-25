@@ -12,14 +12,14 @@ import numpy as np
 from tensorflow import keras
 import time
 
-x_train = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/SGM_data_train.npy')
-y_train = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/SGM_label10_train.npy')
+x_train = np.load('../dataset/SGM-CNN/新建文件夹/SGM_data_train.npy')
+y_train = np.load('../dataset/SGM-CNN/新建文件夹/SGM_label10_train.npy')
 
-x_test = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/test_select_12_data.npy')
-y_test = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/test_select_12_label_10.npy')
+x_test = np.load('../dataset/SGM-CNN/新建文件夹/test_select_12_data.npy')
+y_test = np.load('../dataset/SGM-CNN/新建文件夹/test_select_12_label_10.npy')
 
-x_val = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/validation_select_12_data.npy')
-y_val = np.load('F:/数据挖掘/SGM-CNN/新建文件夹/validation_select_12_label_10.npy')
+x_val = np.load('../dataset/SGM-CNN/新建文件夹/validation_select_12_data.npy')
+y_val = np.load('../dataset/SGM-CNN/新建文件夹/validation_select_12_label_10.npy')
 
 
 print(x_train.shape,y_train.shape,x_test.shape,y_test.shape,x_val.shape,y_val.shape)
@@ -81,7 +81,7 @@ ckpt_callback=tf.keras.callbacks.ModelCheckpoint(
                 os.path.join(save_dir, filename),monitor='val_acc'
                 , verbose=1, save_best_only=False)
 # checkpoint = tf.train.Checkpoint(model=model)
-# checkpoint.restore(tf.train.latest_checkpoint("F:/数据挖掘/SGM-CNN/classification decision/model_save"))
+# checkpoint.restore(tf.train.latest_checkpoint("../dataset/SGM-CNN/classification decision/model_save"))
 history = model.fit(x_train, y_train,
                     epochs=10,
                     batch_size=batch_size,
@@ -95,7 +95,7 @@ print("train_time:",train_time)
 scores = model.evaluate(x_test, y_test)
 print("test_loss = ", scores[0],"test_accuracy = ", scores[1])
 
-model.save('F:/数据挖掘/SGM-CNN/model_out')#save model
+model.save('../dataset/SGM-CNN/model_out')#save model
 
 # test model
 
